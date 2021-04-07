@@ -71,6 +71,13 @@ gulp.task('img', async function () {
 		.pipe(browserSync.stream());
 });
 
+gulp.task('css', async function () {
+	gulp.src('app/css/*.*') // Выберем файлы по нужному пути
+		.pipe(gulp.dest('dist/css'))// Переместим их в папку build
+
+		.pipe(browserSync.stream());
+});
+
 gulp.task('fonts', async function () {
 	gulp.src('app/fonts/**/*.*') // Выберем файлы по нужному пути
 		.pipe(gulp.dest('dist/fonts'))// Переместим их в папку build
@@ -86,6 +93,15 @@ gulp.task('js', async function() {
 	// .pipe(uglify()) // Mifify js (opt.)
 	// .pipe(gulp.dest('app/js'))
 	.pipe(gulp.dest('dist/js'))
+	.pipe(browserSync.stream())
+});
+gulp.task('libs', async function() {
+	gulp.src([
+		'app/libs/*.*', // Always at the end
+		])
+	// .pipe(uglify()) // Mifify js (opt.)
+	// .pipe(gulp.dest('app/js'))
+	.pipe(gulp.dest('dist/libs'))
 	.pipe(browserSync.stream())
 });
 
@@ -121,6 +137,8 @@ gulp.task('watch',function() {
 	gulp.watch('app/fonts/*/**.*', gulp.series('fonts')).on('change', browserSync.reload);
 
 	gulp.watch('app/js/*.js', gulp.series('js')).on('change', browserSync.reload);
+	gulp.watch('app/libs/*.js', gulp.series('libs')).on('change', browserSync.reload);
+	gulp.watch('app/css/*.scss', gulp.series('css')).on('change', browserSync.reload);
 	gulp.watch('app/details/*.html',  gulp.series('det')).on('change', gulp.task('html'));
 	gulp.watch('app/*.html',  gulp.series('html')).on('change', browserSync.reload);
 

@@ -1,5 +1,25 @@
 @media screen and (max-width: 1440px) {
+  body {
+    font-size: 14px;
+  }
 .container {
   max-width: 1010px;
 }
+  .menu__dropped {
+    > p {
+      max-width: 75px;
+    }
+    ul {
+      max-height: 220px;
+      li {
+        width: 80px;
+        flex-basis: 80px;
+        a {
+          img {
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
 }

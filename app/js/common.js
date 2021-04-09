@@ -108,20 +108,52 @@ burgerMenuOpen();
 
 document.body.addEventListener('wheel', (e) => {
     let side = e.deltaY;
+    let btmLine = document.querySelector('.header__bottom-line');
+    let height = btmLine.clientHeight;
     if (e.target.closest('.seo-block__content')) {
         e.stopPropagation();
     } else {
         if (window.innerWidth > 600) {
             if (side > 0) {
                 document.querySelector('header').classList.add('scroll-down');
+                document.querySelector('header').nextElementSibling.style.marginTop = `${height}px`;
             } else {
                 document.querySelector('header').classList.remove('scroll-down');
-
+                document.querySelector('header').nextElementSibling.style.marginTop = `0px`;
             }
+        } else {
+            document.querySelector('header').nextElementSibling.style.marginTop = `0px`;
+            document.querySelector('header').classList.remove('scroll-down');
+
         }
     }
 
 
 });
+
+//slider product page
+
+$('.slider-product-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.slider-product-nav',
+    nextArrow: '<button class="slick-slider-arrow slick-next"></button>',
+    prevArrow: '<button class="slick-slider-arrow slick-prev"></button>'
+});
+$('.slider-product-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-product-for',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    vertical: true,
+    nextArrow: '<button class="slick-slider-arrow slick-next"></button>',
+    prevArrow: '<button class="slick-slider-arrow slick-prev"></button>'
+});
+
+//slider product page
 
 

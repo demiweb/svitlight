@@ -34,6 +34,27 @@
 }
 
 @media screen and (max-width: 992px) {
+  .blog-article {
+    flex-direction: column;
+  }
+  .blog-article__right {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 30px;
+    .product-card {
+      width: calc((100% / 3) - (40px / 3));
+      margin-right: 20px;
+      &:nth-child(even) {
+        margin-right: 20px;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+  .blog-article__left {
+    width: 100%;
+  }
   .product__left {
     height: 240px;
   }
@@ -394,6 +415,58 @@
 
 
 @media screen and (max-width: 640px) {
+  .all-products {
+    flex-direction: column;
+
+  }
+  .filter-prod {
+    width: 100%;
+    padding-right: 0;
+  }
+  .panel-heading {
+    background: #FAFAFA;
+    mix-blend-mode: normal;
+    border: 0.5px solid #C7C7C7;
+    box-sizing: border-box;
+    border-radius: 3.5px;
+    padding: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #767676;
+  }
+  .list-group {
+    display: none;
+  }
+
+  .all-products__content {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .all-products__list {
+    .product-card {
+      width: calc(50% - 5px);
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &:nth-child(4n) {
+        margin-right: 10px;
+
+      }
+      &:nth-child(3n) {
+        margin-right: 10px;
+
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
   .product-card {
     width: calc((100% / 3) - (20px / 3));
 
@@ -467,6 +540,29 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .blog-article__left span {
+    font-size: 2em;
+  }
+  .blog-article__right {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 30px;
+    .product-card {
+      width: calc(50% - 5px);
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &:nth-child(5n) {
+        margin-right: 10px;
+      }
+      &:nth-child(3n) {
+        margin-right: 10px;
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
   .product-card__price p {
     font-size: 12px;
     strong {

@@ -185,7 +185,23 @@ function filterDropConsist() {
         })
     }
 }
-filterDropConsist()
+filterDropConsist();
+
+
+let openedMobFilter = [...document.querySelectorAll('.ocfilter .panel-heading')];
+
+function openMobFilter() {
+    if (!openedMobFilter.length) {
+
+    } else {
+        openedMobFilter.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.ocfilter').classList.toggle('open');
+            })
+        })
+    }
+}
+openMobFilter();
 //filter checkbox
 
 

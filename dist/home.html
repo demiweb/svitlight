@@ -41,8 +41,8 @@
                         <p>мова</p>
                     </div>
                     <ul>
-                        <li><a href="#"><img src="./img/icon__phone.svg" alt=""></a></li>
-                        <li><a href="#" class="not-empty"><img src="./img/icon__cart.svg" alt=""></a></li>
+                        <li><a class="open-modal open-modal--call" href="#"><img src="./img/icon__phone.svg" alt=""></a></li>
+                        <li><a href="#" class="open-modal open-modal--cart not-empty"><img src="./img/icon__cart.svg" alt=""></a></li>
                     </ul>
                 </div>
 
@@ -3444,9 +3444,11 @@
 
 
         </div>
+
     </div>
 
 </main>
+
 <footer>
     <div class="container">
         <div class="footer">
@@ -3486,10 +3488,202 @@
 
     </div>
 </footer>
+<div class="modal-window modal-window--call">
+
+    <div class="modal-container">
+        <div class="container">
+            <div class="modal-content">
+
+                <div class="modal-content__left">
+                    <div class="modal-content__field modal-content__field--border">
+                        <span>замовте дзвінок</span>
+                        <p>ми зателефонуємо вам якомога скоріше</p>
+                        <form action="">
+                            <label for="modal-name">
+                                <input type="text" id="modal-name" placeholder="імя">
+                                <span></span>
+                            </label>
+                            <label for="modal-number">
+                                <input placeholder="+ 380 (xx) xxx xx xx" type="text" data-lang="ua" class="input-phone"
+                                       id="modal-number">
+                                <span></span>
+                            </label>
+                            <button class="btn btn-green-light">замовити</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-content__left">
+                    <div class="modal-content__field">
+                        <span>телефонуй та пиши</span>
+                        <p>дамо вам відповідь як умога швидше</p>
+
+                        <ul>
+                            <li><p>(lifecell)</p><a href="tel:+">+ 380 (xx) xxx xx xx</a></li>
+                            <li><p>(lifecell)</p><a href="tel:+">+ 380 (xx) xxx xx xx</a></li>
+                            <li><p>(vodafone)</p><a href="tel:+">+ 380 (xx) xxx xx xx</a></li>
+                        </ul>
+
+                        <p>ставте нам питання в мессенджерах</p>
+
+                        <div class="modal-socials">
+                            <a href="#" class="btn btn-social btn-social--pink">viber</a>
+                            <a href="#" class="btn btn-social btn-social--blue">telegram</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-content__right">
+                    <div class="modal-content__field modal-content__field--reverse">
+                        <span>години роботи</span>
+                        <div class="work-dates">
+                            <ul>
+                                <li><span>понеділок</span>
+                                    <p>8:00 – 18:00</p></li>
+                                <li><span>вівторок</span>
+                                    <p>8:00 – 18:00</p></li>
+                                <li><span>середа</span>
+                                    <p>8:00 – 18:00</p></li>
+                                <li><span>четвер</span>
+                                    <p>8:00 – 18:00</p></li>
+                                <li><span>пятниця</span>
+                                    <p>8:00 – 18:00</p></li>
+                                <li><span>субота</span>
+                                    <p>8:00 – 18:00</p></li>
+                                <li><span>неділя</span>
+                                    <p>вихідний</p></li>
+                            </ul>
+                        </div>
+                        <p>Святкові дні години роботи можуть змінюватися.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        <div class="notify notify--good notify--add-cart">
+            <div class="notify__left">
+                <img src="./img/like-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>додано в кошик</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--good notify--add-like">
+            <div class="notify__left">
+                <img src="./img/like-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>додано в лайки</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--good notify--add-filter">
+            <div class="notify__left">
+                <img src="./img/like-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>фільтр застосовано</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--cancel notify--rem-filter">
+            <div class="notify__left">
+                <img src="./img/like-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>фільтр скасовано</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--cancel notify--rem-filter-all">
+            <div class="notify__left">
+                <img src="./img/like-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>всі фільтри скасовані</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--cancel notify--rem-cart">
+            <div class="notify__left">
+                <img src="./img/heart-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>прибрано з кошика</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--cancel notify--rem-like">
+            <div class="notify__left">
+                <img src="./img/heart-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>прибрано з лайків</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--fill notify--fill-all">
+            <div class="notify__left">
+                <img src="./img/attent-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>будь ласка, заповніть
+                    всі поля</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--fill notify--fill-del">
+            <div class="notify__left">
+                <img src="./img/attent-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>будь ласка, виберіть
+                    пункт доставки</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--good notify--accept">
+            <div class="notify__left">
+                <img src="./img/phone-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>вашу заявку прийнято</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
+        <div class="notify notify--cancel notify--404">
+            <div class="notify__left">
+                <img src="./img/404-img.png" alt="">
+            </div>
+            <div class="notify__right">
+                <span>сповіщення</span>
+                <p>розділ ще в розробці</p>
+            </div>
+            <div class="close-notify"></div>
+        </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <script type="text/javascript" src="./libs/slick.min.js"></script>
+<script type="text/javascript" src="./libs/jquery.maskedinput.min.js"></script>
+
 <script type="text/javascript" src="./js/scripts.min.js"></script>
+<script>
+
+</script>
 </body>
 </html>

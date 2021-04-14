@@ -25,15 +25,93 @@
       }
     }
   }
+  .work-dates {
+    margin: 15px 0;
+  }
   .seo-block__box {
     h1, h2, h3, h4, h5, h6, p {
       max-width: 350px;
+    }
+  }
+  .modal-content__field {
+    > p {
+      max-width: 175px;
     }
   }
 
 }
 
 @media screen and (max-width: 992px) {
+  .modal-window {
+    top: 71px;
+  }
+  .modal-content__left {
+    padding: 12px 25px;
+
+  }
+  .modal-content__right {
+    padding: 12px 36px 12px 10px;
+  }
+  .modal-socials {
+    margin-top: 14px;
+    .btn {
+      width: 130px;
+      height: 20px;
+    }
+  }
+  .work-dates {
+    margin: 4px 0 7px;
+    ul {
+      li {
+        height: 18px;
+        span, p {
+          font-size: 0.833em;
+        }
+      }
+    }
+  }
+  .modal-content__field {
+    padding: 9px 14px;
+    > span {
+      font-size: 1.16em;
+    }
+    > p {
+      font-size: 0.833em;
+    }
+    > ul {
+      li {
+        p {
+          font-size: 0.833em;
+          max-width: 46px;
+        }
+      }
+    }
+    form {
+      .btn {
+        width: 120px;
+        height: 20px;
+      }
+      label {
+
+        input {
+          height: 25px;
+          width: calc(100% - 20px);
+          flex-grow: 1;
+          box-sizing: border-box;
+          padding-left: 9px;
+          font-size: 0.8333em;
+          &::placeholder {
+            font-size: 0.8333em;
+          }
+        }
+        span {
+          flex-shrink: 0;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
   .blog-article {
     flex-direction: column;
   }
@@ -415,6 +493,78 @@
 
 
 @media screen and (max-width: 640px) {
+  .modal-window {
+    overflow-y: scroll;
+    align-items: flex-start;
+  }
+  .modal-container {
+    align-items: flex-start;
+  }
+  .modal-content {
+    padding: 15px;
+    border-radius: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .modal-content__field form label input {
+    height: 30px;
+    width: 200px;
+    flex-grow: 0;
+  }
+  .modal-content__field form .btn {
+    width: 160px;
+    border-right: 3.5px;
+    height: 30px;
+
+  }
+  .modal-content__field>ul li  {
+    justify-content: flex-start;
+    p {
+      display: none;
+    }
+  }
+  .modal-content__field>ul {
+    margin: 10px 0;
+  }
+  .modal-socials .btn {
+    width: 130px;
+    height: 25px;
+    margin-bottom: 3px;
+  }
+  .work-dates ul li p {
+    font-size: 8px;
+  }
+  .modal-content__field form label span {
+    width: 25px;
+    height: 25px;
+  }
+  .modal-content__left {
+    width: 50%;
+    padding: 0;
+    border-radius: 15px;
+    .modal-content__field {
+      padding: 15px 5px;
+    }
+    &:first-child {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+      .modal-content__field {
+        padding: 15px 20px;
+      }
+    }
+  }
+  .work-dates ul li {
+    padding: 0 3px;
+  }
+  .modal-content__right {
+    padding: 0;
+    width: 50%;
+    border-radius: 15px;
+  }
+  .modal-content__field {
+    padding: 15px 20px;
+  }
   .filter-checked {
     > span {
       display: none;
@@ -927,5 +1077,11 @@
   }
   .footer__menu ul li a {
     font-size: 8px;
+  }
+  .modal-content__left {
+    width: 100%;
+  }
+  .modal-content__right {
+    width: 100%;
   }
 }

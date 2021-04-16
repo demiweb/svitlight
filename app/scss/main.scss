@@ -73,6 +73,7 @@ body {
 
 html {
   height: auto;
+  min-height: 100%;
   font-size: 16px;
 }
 
@@ -4831,6 +4832,7 @@ form.checkout-form {
   justify-content: flex-start;
   margin-top: 10px;
 }
+
 .info-open {
   background: #FAFAFA;
   mix-blend-mode: normal;
@@ -4847,10 +4849,12 @@ form.checkout-form {
   height: 30px;
   width: 100%;
   display: none;
+
   &.active {
     background: #84B286;
     color: $white;
   }
+
   &:hover {
     background: #C7C7C7;
     color: $white;
@@ -4883,6 +4887,7 @@ form.checkout-form {
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 15px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -4890,6 +4895,7 @@ form.checkout-form {
   & > *:last-child {
     margin-bottom: 0;
   }
+
   > h2, h1, h3, h4, h5, h6 {
     display: inline-block;
     width: 100%;
@@ -4912,6 +4918,7 @@ form.checkout-form {
     width: 100%;
     display: inline-block;
     margin-bottom: 6px;
+
     &:hover {
       color: #9DC19E;
     }
@@ -4944,13 +4951,16 @@ form.checkout-form {
 
       color: #959595;
       margin-bottom: 6px;
+
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
+
   ol {
     padding-left: 13px;
+
     li {
       font-style: normal;
       font-weight: normal;
@@ -4959,6 +4969,7 @@ form.checkout-form {
 
       color: #959595;
       margin-bottom: 6px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -5018,6 +5029,185 @@ form.checkout-form {
         }
       }
     }
+  }
+}
+
+
+.final-order {
+  background: #FAFAFA;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
+
+
+}
+
+.final-order-container {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px 20px 35px;
+  left: 50%;
+  box-sizing: border-box;
+
+  height: auto;
+  margin: auto;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.final-order__left {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  > a {
+    width: 180px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  > span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #1A1A1A;
+
+  }
+
+  > p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #959595;
+    margin-bottom: 16px;
+
+    em {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      text-decoration-line: underline;
+      text-decoration-style: from-font;
+      color: #959595
+    }
+
+    strong {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 43px;
+
+      color: #1A1A1A;
+    }
+  }
+
+}
+
+.final-order__right {
+  width: 45%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  .footer__socials {
+    margin-left: 0;
+    margin-top: 65px;
+    padding-bottom: 15px;
+    border-bottom: 0.5px solid #E5E5E5;
+    .btn-social {
+      width: 180px;
+      height: 30px;
+    }
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #84B286;
+
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+
+}
+
+.back-buy {
+  margin-top: 15px;
+  .btn {
+    width: 180px;
+    height: 30px;
+
+  }
+}
+
+.offer-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #FAFAFA;
+  border-radius: 10px;
+  padding: 15px 20px 22px;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.offer-table__line {
+  width: 100%;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 125%;
+    color: #C4C4C4;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 125%;
+    color: #767676;
+  }
+
+  i {
+    display: inline-block;
+    flex-grow: 1;
+    border-bottom: 0.5px solid #E5E5E5;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

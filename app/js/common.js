@@ -97,6 +97,7 @@ function burgerMenuOpen() {
         burgerBtn.forEach((btn) => {
             btn.addEventListener('click', () => {
                 btn.classList.toggle('open');
+                document.querySelector('.header__bottom-line').classList.toggle('open');
                 btn.closest('header').classList.toggle('open');
 
             })
@@ -108,36 +109,36 @@ burgerMenuOpen();
 
 //burger menu
 
-document.body.addEventListener('wheel', (e) => {
-    let side = e.deltaY;
-    let btmLine = document.querySelector('.header__bottom-line');
-
-    if (!btmLine) {
-
-    } else {
-        let height = btmLine.clientHeight;
-        if (e.target.closest('.seo-block__content') || e.target.closest('.seo-block__cont')) {
-            e.stopPropagation();
-        } else {
-            if (window.innerWidth > 600) {
-                if (side > 0) {
-                    document.querySelector('header').classList.add('scroll-down');
-                    document.querySelector('header').nextElementSibling.style.marginTop = `${height}px`;
-                } else {
-                    document.querySelector('header').classList.remove('scroll-down');
-                    document.querySelector('header').nextElementSibling.style.marginTop = `0px`;
-                }
-            } else {
-                document.querySelector('header').nextElementSibling.style.marginTop = `0px`;
-                document.querySelector('header').classList.remove('scroll-down');
-
-            }
-        }
-    }
-
-
-
-});
+// document.body.addEventListener('wheel', (e) => {
+//     let side = e.deltaY;
+//     let btmLine = document.querySelector('.header__bottom-line');
+//
+//     if (!btmLine) {
+//
+//     } else {
+//         let height = btmLine.clientHeight;
+//         if (e.target.closest('.seo-block__content') || e.target.closest('.seo-block__cont')) {
+//             e.stopPropagation();
+//         } else {
+//             if (window.innerWidth > 600) {
+//                 if (side > 0) {
+//                     document.querySelector('header').classList.add('scroll-down');
+//                     document.querySelector('header').nextElementSibling.style.marginTop = `${height}px`;
+//                 } else {
+//                     document.querySelector('header').classList.remove('scroll-down');
+//                     document.querySelector('header').nextElementSibling.style.marginTop = `0px`;
+//                 }
+//             } else {
+//                 document.querySelector('header').nextElementSibling.style.marginTop = `0px`;
+//                 document.querySelector('header').classList.remove('scroll-down');
+//
+//             }
+//         }
+//     }
+//
+//
+//
+// });
 
 //slider product page
 
@@ -709,9 +710,6 @@ jQuery(function($) {
         navHeight = nav.outerHeight(); // получаем высоту навигации
 
     // поворот экрана
-    window.addEventListener('orientationchange', function () {
-        navHeight = nav.outerHeight();
-    }, false);
 
     $(window).on('scroll', function () {
         const position = $(this).scrollTop();
@@ -745,4 +743,76 @@ jQuery(function($) {
 
 //change selectors
 
+let menuMobileItems = [...document.querySelectorAll('.header__menu>ul>li>a')];
+
+function menuMobileClick() {
+    if(!menuMobileItems.length) {
+
+    } else {
+        menuMobileItems.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                if (window.innerWidth > 640) {
+
+                } else {
+                    e.preventDefault();
+                    if (document.querySelector('.header__menu>ul>li>a.show')) {
+                        document.querySelector('.header__menu>ul>li>a.show').classList.remove('show');
+                    } else {
+
+                    }
+                    btn.classList.toggle('show');
+
+                }
+
+            })
+        })
+    }
+};
+
+menuMobileClick();
+
+
+// Получаем нужный элемент
+var elementBtns = document.querySelector('.product-head .product-head__price');
+
+var Visible = function (target) {
+    if (!elementBtns) {
+
+    } else {
+        var targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            // Если элемент полностью видно, то запускаем следующий код
+            document.querySelector('.prod-banner').classList.remove('visible');
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            document.querySelector('.prod-banner').classList.add('visible');
+        };
+    }
+    // Все позиции элемента
+
+};
+
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function() {
+    Visible (elementBtns);
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+Visible (elementBtns);
 

@@ -204,7 +204,9 @@ header {
       &:focus {
         border: none;
         outline: none;
-
+        &::placeholder {
+          color: rgba(255, 255, 255, 0);
+        }
         & + button {
           background: $light-c7;
           transition: background-color 0.3s ease;
@@ -215,22 +217,33 @@ header {
               transition: all 0.3s ease;
             }
           }
-        }
-      }
+          &:hover {
+            background-color: #84B286;
 
-      &.not-empty {
-        & + button {
-          background-color: #84B286;
-
-          svg {
-            path {
-              fill: $white;
-              transition: all 0.3s ease;
+            svg {
+              path {
+                fill: $white;
+                transition: all 0.3s ease;
+              }
             }
-          }
 
+          }
         }
       }
+
+      //&.not-empty {
+      //  & + button {
+      //    background-color: #84B286;
+      //
+      //    svg {
+      //      path {
+      //        fill: $white;
+      //        transition: all 0.3s ease;
+      //      }
+      //    }
+      //
+      //  }
+      //}
 
 
     }
@@ -254,6 +267,17 @@ header {
         path {
           transition: all 0.3s ease;
           fill: #767676;
+        }
+
+      }
+      &:hover {
+        background-color: #84B286;
+
+        svg {
+          path {
+            fill: $white;
+            transition: all 0.3s ease;
+          }
         }
 
       }
@@ -440,7 +464,7 @@ header {
 .header__bottom-line {
   width: 100%;
   background: #fafafa;
-  z-index: 1;
+  z-index: 9;
   transition: transform 0.4s ease;
 }
 
@@ -517,6 +541,7 @@ header {
           object-fit: contain;
           width: 100%;
           max-height: 55px;
+          margin: auto 0;
 
         }
 
@@ -664,7 +689,16 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
+  span {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1A1A1A;
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
   a {
     font-family: $main-font;
     font-style: normal;
@@ -680,7 +714,7 @@ header {
     }
 
     &:hover {
-      text-decoration: underline;
+      color: #767676;
     }
   }
 
@@ -987,6 +1021,9 @@ footer {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  .slick-slide {
+    border-radius: 15px;
+  }
 }
 
 .slick-list, .slick-track {
@@ -996,7 +1033,7 @@ footer {
 
 .one-slide {
   height: 100%;
-
+  border-radius: 15px;
   picture {
     width: 100%;
     height: 100%;
@@ -1004,6 +1041,7 @@ footer {
     img {
       width: 100%;
       height: 100%;
+      border-radius: 15px;
       object-fit: cover;
     }
   }
@@ -1062,7 +1100,7 @@ footer {
     }
   }
 
-  &:focus, &:active {
+  &:active {
     transition: background-color 0.3s ease;
     background: #84B286;
 
@@ -1139,6 +1177,9 @@ footer {
     font-size: 1rem;
     line-height: 125%;
     color: #959595;
+    br {
+      display: none;
+    }
   }
 }
 
@@ -1725,6 +1766,7 @@ footer {
   justify-content: flex-start;
   max-height: 425px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   &:nth-child(even) {
     margin-right: 0;
@@ -1818,6 +1860,7 @@ footer {
       /* identical to box height, or 100% */
 
       text-align: center;
+      text-transform: lowercase;
 
       color: #84B286;
 
@@ -1848,6 +1891,9 @@ footer {
   top: 100px;
 }
 
+.fancybox-toolbar {
+  display: none !important;
+}
 .slider-product-nav {
   width: 80px;
   margin-right: 20px;
@@ -1997,11 +2043,13 @@ footer {
   padding: 10px 15px;
   box-sizing: border-box;
   z-index: 2;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-
+  &.visible {
+    display: flex;
+  }
   p {
     font-style: normal;
     font-weight: 300;
@@ -2066,11 +2114,12 @@ footer {
   background: #FFFFFF;
   border-radius: 15px;
   display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 15px;
-  margin: 0 0 10px;
+  margin: 10px 0 10px;
   box-sizing: border-box;
 
   p {
@@ -2208,6 +2257,11 @@ footer {
 .product-page__info {
   width: 100%;
   margin-top: 35px;
+  .product-info__head {
+    position: sticky;
+    top: 100px;
+    z-index: 9;
+  }
 }
 
 .product-info__head {
@@ -2360,6 +2414,7 @@ footer {
   justify-content: flex-start;
   padding: 20px 0;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 
   .product-card {
     margin-right: 20px;
@@ -2593,7 +2648,8 @@ footer {
     margin: 0;
     margin-left: 6px;
     list-style: none;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling-x: hidden;
 
     li {
       flex-shrink: 0;
@@ -2607,7 +2663,45 @@ footer {
       border-radius: 5px;
       padding: 5px 9px;
       margin-right: 5px;
+      cursor: pointer;
+      position: relative;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+      border: 1px solid rgba(255, 255, 255, 0);
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 9px;
+        height: 1.5px;
+        background: #CB6666;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &:active {
+        background: #CB6666;
+      }
+      &:hover {
+        border-color: #CB6666;
+        color: rgba(255, 255, 255, 0);
+        &::after, &::before {
+          opacity: 1;
+        }
 
+
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -2783,6 +2877,7 @@ footer {
   width: 100%;
   max-height: 189px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   h1, h2, h3, h4, h5, h6 {
     font-style: normal;
@@ -2851,6 +2946,68 @@ footer {
   &:first-child {
     margin-top: 0;
   }
+  &:last-child {
+    margin-top: 0;
+  }
+
+
+}
+
+.ocfilter-remove {
+  width: 100%;
+  button {
+    border: 0.5px solid #C7C7C7;
+    background: $white;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+    color: #767676;
+    svg {
+      margin-left: 5px;
+      margin-top: 1px;
+      path {
+        stroke: #767676;
+        transition: stroke 0.3s ease;
+      }
+    }
+    &:active {
+      background: #D58585;
+      color: $white;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+      svg {
+        path {
+          stroke: white;
+          transition: stroke 0.3s ease;
+        }
+      }
+    }
+    &:hover {
+      background: #CB6666;
+      color: $white;
+      border-color: #CB6666;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+      svg {
+        path {
+          stroke: $white;
+          transition: stroke 0.3s ease;
+        }
+      }
+    }
+  }
 }
 
 .ocf-option-name {
@@ -2859,6 +3016,7 @@ footer {
   font-size: 1em;
   line-height: 125%;
   color: #000000;
+  text-transform: lowercase;
 }
 
 .ocf-option-values {
@@ -2895,6 +3053,7 @@ footer {
       color: #767676;
       cursor: pointer;
       outline: none;
+      text-transform: lowercase;
 
       &::after {
         display: inline-block;
@@ -3055,7 +3214,6 @@ footer {
 
 .noUi-connect {
   background: #84B286;
-  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
   -webkit-transition: background 450ms;
   transition: background 450ms;
 }
@@ -3213,14 +3371,14 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #FAFAFA;
+  background: #fafafada;
   align-items: center;
   display: flex;
   visibility: hidden;
   z-index: 10;
   opacity: 0;
   transform: translate(0, -100%);
-  transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 
   &.open {
     display: flex;
@@ -3310,7 +3468,7 @@ footer {
 
     &:focus, &.active {
       background: #9DC19E;
-
+      border-color: rgba(255, 255, 255, 0);
       svg {
         path {
           fill: $white;
@@ -3322,6 +3480,7 @@ footer {
     &:hover {
       transition: background-color 0.3s ease, color 0.3s ease;
       background: #84B286;
+      border-color: rgba(255, 255, 255, 0);
 
       svg {
         path {
@@ -3390,7 +3549,7 @@ footer {
     input {
       width: 40px;
       height: 25px;
-      z-index: 2;
+      z-index: 1;
       transform: translate(-13px, 0);
       box-sizing: border-box;
       background: #FAFAFA;
@@ -3425,14 +3584,14 @@ footer {
 }
 
 .btn-value {
-  width: 26px;
+  width: 21px;
   height: 25px;
   flex-shrink: 0;
   background: #FAFAFA;
   text-align: center;
   font-style: normal;
   font-weight: normal;
-  font-size: 8px;
+  font-size: 12px;
   padding: 0;
   line-height: 125%;
   color: #1A1A1A;
@@ -3440,13 +3599,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+
   cursor: pointer;
   outline: none;
+  z-index: 2;
 
   svg {
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
 
     path {
       stroke: #767676;
@@ -3461,13 +3621,15 @@ footer {
   &--minus {
     transform: translate(0, 0);
     justify-content: flex-start;
-    padding-left: 4px;
+    padding-left: 8px;
+    border-radius: 13px 0 0 13px;
   }
 
   &--plus {
     transform: translate(-100%, 0);
     justify-content: flex-end;
-    padding-right: 4px;
+    padding-right: 8px;
+    border-radius: 0 13px 13px 0;
   }
 
   &:focus {
@@ -3665,6 +3827,7 @@ footer {
   margin-top: 10px;
   max-height: 300px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar-track {
     transform: translate(20px, 0);
@@ -3724,7 +3887,7 @@ input[type=number] {
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   .container {
 
@@ -3866,7 +4029,9 @@ input[type=number] {
     }
   }
 }
-
+input[type='text'], input[type='email'], input[type='search'], input[type='number'] {
+  -webkit-appearance: none;
+}
 form.form-inputs {
   width: 100%;
   margin: 20px 0;
@@ -3905,8 +4070,10 @@ form.form-inputs {
 
     input {
       background: #FAFAFA;
+      box-shadow: none !important;
       mix-blend-mode: normal;
       border-radius: 2.5px;
+      outline: none !important;
       border: 1px solid rgba(255, 255, 255, 0);
       height: 35px;
       width: 200px;
@@ -4646,6 +4813,7 @@ form.checkout-form {
     justify-content: flex-start;
     max-height: 212px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
 
     &::-webkit-scrollbar {
@@ -5042,6 +5210,7 @@ form.checkout-form {
   bottom: 0;
   left: 0;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   padding: 15px;
   box-sizing: border-box;
@@ -5059,6 +5228,7 @@ form.checkout-form {
   height: auto;
   margin: auto;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -5129,6 +5299,7 @@ form.checkout-form {
   .footer__socials {
     margin-left: 0;
     margin-top: 65px;
+    margin-bottom: 13px;
 
     .btn-social {
       width: 180px;

@@ -49,6 +49,24 @@
 }
 
 @media screen and (max-width: 992px) {
+  .error-page {
+    max-width: 363px;
+    img {
+      margin-bottom: 11px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 10px;
+    }
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
   .menu-filter ul {
     width: 100px;
   }
@@ -665,7 +683,28 @@
 
 
 @media screen and (max-width: 640px) {
-
+  .error-page {
+    max-width: 300px;
+    img {
+      margin-bottom: 16px;
+      display: none;
+      &.mob {
+        display: block;
+      }
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 10px;
+    }
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
   .blog-list {
     margin-bottom: 20px;
   }
@@ -1293,7 +1332,7 @@
     margin-bottom: 10px;
   }
   header {
-    z-index: 100;
+    z-index: 2000;
 
     &.open {
       .header__bottom-line {

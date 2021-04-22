@@ -4755,6 +4755,46 @@ form.checkout-form label span::after {
   margin-bottom: 0;
 }
 
+.error-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 483px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.error-page img {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  margin-bottom: 39px;
+}
+.error-page img.mob {
+  display: none;
+}
+.error-page p {
+  margin-bottom: 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.error-page p strong {
+  font-weight: 500;
+  color: #cb6666;
+}
+.error-page span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #959595;
+}
+
 @media screen and (max-width: 1440px) {
   body, html {
     font-size: 14px;
@@ -4799,6 +4839,25 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 992px) {
+  .error-page {
+    max-width: 363px;
+  }
+  .error-page img {
+    margin-bottom: 11px;
+  }
+  .error-page p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 10px;
+  }
+  .error-page span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   .menu-filter ul {
     width: 100px;
   }
@@ -5435,6 +5494,29 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .error-page {
+    max-width: 300px;
+  }
+  .error-page img {
+    margin-bottom: 16px;
+    display: none;
+  }
+  .error-page img.mob {
+    display: block;
+  }
+  .error-page p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 10px;
+  }
+  .error-page span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   .blog-list {
     margin-bottom: 20px;
   }
@@ -6113,7 +6195,7 @@ form.checkout-form label span::after {
   }
 
   header {
-    z-index: 100;
+    z-index: 2000;
   }
   header.open .header__bottom-line {
     right: 0;

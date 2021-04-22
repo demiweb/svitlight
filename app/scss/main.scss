@@ -5410,4 +5410,44 @@ form.checkout-form {
   }
 }
 
+.error-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 483px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    margin-bottom: 39px;
+    &.mob {
+      display: none;
+    }
+  }
+  p {
+    margin-bottom: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    strong {
+      font-weight: 500;
+      color: rgb(203, 102, 102);
+    }
+  }
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #959595;
+  }
+}
+
 @import "media"; // Always at the end

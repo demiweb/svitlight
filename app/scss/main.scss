@@ -364,7 +364,9 @@ header {
         border-radius: 7.5px;
         transition: background-color 0.3s ease;
         position: relative;
-
+        img {
+          height: 27px;
+        }
         &.not-empty {
           &::after {
             content: '';

@@ -420,6 +420,9 @@ header.scroll-down .header__bottom-line {
   transition: background-color 0.3s ease;
   position: relative;
 }
+.header__right > ul li a img {
+  height: 27px;
+}
 .header__right > ul li a.not-empty::after {
   content: "";
   display: inline-block;

@@ -1078,7 +1078,7 @@ footer {
   border-bottom: 1px solid #E5E5E5;
   box-sizing: border-box;
 }
-.products__name span {
+.products__name span, .products__name h1 {
   font-family: "SF Pro Display", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1089,7 +1089,7 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.products__name span strong {
+.products__name span strong, .products__name h1 strong {
   font-size: 12px;
   line-height: 14px;
 }
@@ -1896,7 +1896,7 @@ footer {
   line-height: 132%;
   color: #1A1A1A;
 }
-.product-head p {
+.product-head p, .product-head h1 {
   font-style: normal;
   font-weight: 500;
   font-size: 1.12rem;
@@ -2219,7 +2219,7 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.blog-article__left span {
+.blog-article__left span, .blog-article__left h1 {
   font-family: "SF Pro Display", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2228,7 +2228,7 @@ footer {
   color: #000000;
   margin-bottom: 8px;
 }
-.blog-article__left span + p {
+.blog-article__left span + p, .blog-article__left h1 + p {
   margin-bottom: 20px;
 }
 .blog-article__left img {
@@ -2932,6 +2932,8 @@ footer {
   width: 100%;
   margin-top: 6px;
   font-style: normal;
+}
+.head-title h1 {
   font-weight: 500;
   font-size: 1.28em;
   line-height: 125%;
@@ -2971,14 +2973,7 @@ footer {
   width: 100%;
   margin-top: 5px;
 }
-.brand-letter ul li input {
-  display: none;
-}
-.brand-letter ul li input:checked + label {
-  color: #ffffff;
-  background: #84B286;
-}
-.brand-letter ul li label {
+.brand-letter ul li a {
   width: 100%;
   padding: 2px 5px;
   box-sizing: border-box;
@@ -2989,9 +2984,15 @@ footer {
   font-size: 0.87em;
   line-height: 125%;
   display: flex;
+  text-decoration: none;
   color: #1A1A1A;
 }
-.brand-letter ul li label:hover {
+.brand-letter ul li a.active {
+  color: #ffffff;
+  background: #84B286;
+}
+.brand-letter ul li a:hover {
+  color: #ffffff;
   background: #E5E5E5;
 }
 
@@ -3606,7 +3607,7 @@ form.form-inputs label input {
   outline: none !important;
   border: 1px solid rgba(255, 255, 255, 0);
   height: 35px;
-  width: 200px;
+  width: 182px;
   font-style: normal;
   font-weight: 500;
   font-size: 1em;
@@ -4022,7 +4023,7 @@ form.checkout-form label {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 15px;
+  margin-top: 0;
 }
 form.checkout-form label:first-child {
   margin-top: 0;
@@ -4286,6 +4287,10 @@ form.checkout-form label span::after {
 }
 .select-type.open .custom-selector {
   display: flex;
+  left: -10px;
+}
+.select-type.open > span::before {
+  transform: translate(0, -50%) rotate(45deg);
 }
 .select-type > span {
   background: #FAFAFA;
@@ -4304,6 +4309,20 @@ form.checkout-form label span::after {
   align-items: center;
   color: #767676;
   position: relative;
+  margin-left: -10px;
+}
+.select-type > span::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1.5px solid #767676;
+  border-right: none;
+  border-bottom: none;
+  transform: translate(0, -100%) rotate(-135deg);
 }
 .select-type > span.active {
   border-color: #84B286;
@@ -4734,6 +4753,10 @@ form.checkout-form label span::after {
     font-size: 14px;
   }
 
+  .products__name span, h1 {
+    font-size: 1rem;
+  }
+
   .container {
     max-width: 1010px;
   }
@@ -4812,7 +4835,7 @@ form.checkout-form label span::after {
   }
 
   form.checkout-form small {
-    margin-bottom: 0;
+    margin-bottom: 7px;
   }
 
   form.checkout-form label input {
@@ -5364,7 +5387,7 @@ form.checkout-form label span::after {
     padding: 6px;
   }
 
-  .products__name span {
+  .products__name span, h1 {
     font-size: 1rem;
   }
 
@@ -5777,7 +5800,7 @@ form.checkout-form label span::after {
   }
 
   .work-dates ul li {
-    padding: 0 3px;
+    padding: 0 5px;
     margin-left: 0;
   }
 
@@ -5788,7 +5811,20 @@ form.checkout-form label span::after {
   }
 
   .modal-content__field {
-    padding: 15px 20px;
+    padding: 10px;
+  }
+
+  .modal-content__field--reverse.modal-content__field {
+    padding: 10px 15px;
+  }
+  .modal-content__field--reverse.modal-content__field ul li {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .product-text div {
+    padding: 10px 15px;
   }
 
   .filter-checked > span {
@@ -5971,7 +6007,7 @@ form.checkout-form label span::after {
     padding: 10px;
   }
 
-  .blog-article__left span {
+  .blog-article__left span, .blog-article__left h1 {
     font-size: 2em;
   }
 

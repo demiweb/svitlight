@@ -99,6 +99,14 @@ function burgerMenuOpen() {
                 btn.classList.toggle('open');
                 document.querySelector('.header__bottom-line').classList.toggle('open');
                 btn.closest('header').classList.toggle('open');
+                let activeModal = document.querySelector('.open-modal.active');
+                if(!activeModal) {
+
+                } else {
+                    activeModal.classList.remove('active');
+                    document.querySelector('.modal-window.open').classList.remove('open');
+                    document.body.classList.remove('no-scroll');
+                }
 
             })
         })
@@ -678,6 +686,7 @@ function ifFormOnPage() {
                         spn.addEventListener('click', () => {
                             let spnValue = spn.innerHTML;
                             inp.value = spnValue;
+                            selectBlock.classList.remove('open');
                         })
                     })
 

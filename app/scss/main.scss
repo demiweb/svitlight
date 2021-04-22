@@ -1155,7 +1155,7 @@ footer {
   border-bottom: 1px solid #E5E5E5;
   box-sizing: border-box;
 
-  span {
+  span, h1 {
     font-family: $main-font;
     font-style: normal;
     font-weight: 500;
@@ -2100,7 +2100,7 @@ footer {
     color: #1A1A1A;
   }
 
-  p {
+  p, h1 {
     font-style: normal;
     font-weight: 500;
     font-size: 1.12rem;
@@ -2461,7 +2461,7 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
 
-  span {
+  span, h1 {
     font-family: $main-font;
     font-style: normal;
     font-weight: 500;
@@ -3291,10 +3291,13 @@ footer {
   width: 100%;
   margin-top: 6px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 1.28em;
-  line-height: 125%;
-  color: #000000;
+  h1 {
+    font-weight: 500;
+    font-size: 1.28em;
+    line-height: 125%;
+    color: #000000;
+  }
+
 }
 
 .brand-letter {
@@ -3332,18 +3335,9 @@ footer {
       width: 100%;
       margin-top: 5px;
 
-      input {
-        display: none;
 
-        &:checked + label {
 
-          color: $white;
-          background: #84B286;
-
-        }
-      }
-
-      label {
+      a {
         width: 100%;
         padding: 2px 5px;
         box-sizing: border-box;
@@ -3354,11 +3348,18 @@ footer {
         font-size: 0.87em;
         line-height: 125%;
         display: flex;
+        text-decoration: none;
 
         color: #1A1A1A;
+        &.active {
 
+          color: $white;
+          background: #84B286;
+
+        }
 
         &:hover {
+          color: $white;
           background: #E5E5E5;
         }
       }
@@ -4077,7 +4078,7 @@ form.form-inputs {
       outline: none !important;
       border: 1px solid rgba(255, 255, 255, 0);
       height: 35px;
-      width: 200px;
+      width: 182px;
       font-style: normal;
       font-weight: 500;
       font-size: 1em;
@@ -4569,7 +4570,7 @@ form.checkout-form {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 15px;
+    margin-top: 0;
 
     &:first-child {
       margin-top: 0;
@@ -4876,6 +4877,12 @@ form.checkout-form {
   &.open {
     .custom-selector {
       display: flex;
+      left: -10px;
+    }
+    > span {
+      &::before {
+        transform: translate(0, -50%) rotate(45deg);
+      }
     }
   }
 
@@ -4896,7 +4903,20 @@ form.checkout-form {
     align-items: center;
     color: #767676;
     position: relative;
-
+    margin-left: -10px;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border: 1.5px solid #767676;
+      border-right: none;
+      border-bottom: none;
+      transform: translate(0, -100%) rotate(-135deg);
+    }
     &.active {
       border-color: #84B286;
 

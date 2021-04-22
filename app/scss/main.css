@@ -381,6 +381,10 @@ header.scroll-down .header__bottom-line {
   display: block;
 }
 
+.header__search > label input {
+  margin-right: 0;
+}
+
 .header__right {
   margin-left: auto;
   display: flex;
@@ -5055,7 +5059,7 @@ form.checkout-form label span::after {
     height: 45px;
   }
   .header__right > ul li a img {
-    height: 20px;
+    height: 26px;
   }
   .header__right > ul li a.not-empty::after {
     width: 7px;
@@ -6222,7 +6226,7 @@ form.checkout-form label span::after {
   }
 
   .header__right > ul li a img {
-    height: 20px;
+    height: 26px;
   }
   .header__right > ul li a.not-empty img {
     height: 26px;

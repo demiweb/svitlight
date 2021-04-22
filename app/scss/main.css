@@ -226,7 +226,7 @@ header, footer {
 }
 
 header {
-  z-index: 10;
+  z-index: 2000;
   position: sticky;
   top: 0;
 }
@@ -617,7 +617,7 @@ header.scroll-down .header__bottom-line {
   justify-content: flex-start;
 }
 .menu__dropped > p {
-  max-width: 97px;
+  max-width: 75px;
   width: 100%;
   font-family: "SF Pro Display", sans-serif;
   font-style: normal;
@@ -631,17 +631,17 @@ header.scroll-down .header__bottom-line {
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  max-height: 250px;
+  max-height: 220px;
   padding: 0;
   margin-left: 5px;
   width: 50%;
 }
 .menu__dropped > ul li {
-  width: 102px;
+  width: 80px;
+  flex-basis: 80px;
   margin-bottom: 10px;
   margin-left: 20px;
   flex-shrink: 0;
-  flex-basis: 102px;
 }
 .menu__dropped > ul li:nth-child(1), .menu__dropped > ul li:nth-child(2) {
   margin-left: 0;
@@ -660,7 +660,7 @@ header.scroll-down .header__bottom-line {
 }
 .menu__dropped > ul li a img {
   width: 100%;
-  height: 102px;
+  height: 80px;
   border-radius: 15px;
   object-fit: contain;
 }
@@ -3976,7 +3976,7 @@ form.form-inputs label span::after {
 
 .checkout__content {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
   background: #ffffff;
   border-radius: 10px;
   padding: 14px 10px;
@@ -4149,7 +4149,8 @@ form.checkout-form label span::after {
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 20px;
+  padding-left: 10px;
+  margin-top: 10px;
 }
 .checkout-no-border > span a {
   font-size: 1.2em;
@@ -4653,7 +4654,7 @@ form.checkout-form label span::after {
 .final-order__right .footer__socials {
   margin-left: 0;
   margin-top: 65px;
-  margin-bottom: 13px;
+  margin-bottom: 19px;
 }
 .final-order__right .footer__socials .btn-social {
   width: 180px;
@@ -4735,6 +4736,10 @@ form.checkout-form label span::after {
 
   .container {
     max-width: 1010px;
+  }
+
+  .final-order__right .footer__socials {
+    margin-bottom: 12px;
   }
 
   .menu__dropped > p {

@@ -323,7 +323,9 @@ header {
     }
   }
 }
-
+.header__search>label input {
+  margin-right: 0;
+}
 .header__right {
   margin-left: auto;
   display: flex;

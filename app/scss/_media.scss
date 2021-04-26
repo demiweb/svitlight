@@ -68,14 +68,6 @@
   .slider-product-nav .slick-slider-arrow.slick-next::after {
     transform: translate(-50%,-2px) rotate(-135deg);
   }
-  .slider-product-for .slick-slider-arrow.slick-next::after {
-    transform: translate(-2px,0) rotate(135deg);
-    -webkit-transform: translate(-4px,0) rotate(135deg);
-  }
-  .slider-product-for .slick-slider-arrow.slick-prev::after {
-    transform: translate(0,0) rotate(-45deg);
-    -webkit-transform: translate(-3px,0) rotate(-45deg);
-  }
   //@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
   //
   //  @media not all and (min-resolution:.001dpcm) {

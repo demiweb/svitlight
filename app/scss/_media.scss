@@ -1216,7 +1216,7 @@
     padding: 0;
     border-radius: 15px;
     .modal-content__field {
-      padding: 15px 5px;
+      padding: 10px 5px 15px;
     }
     &:first-child {
       width: 100%;
@@ -1843,6 +1843,14 @@
     svg {
       width: 12px;
     }
+  }
+   .work-dates ul li span {
+     font-size: 12px;
+     line-height: 12px;
+  }
+  .work-dates ul li p {
+    font-size: 8px;
+    line-height: 12px;
   }
 }
 @media screen and (max-width: 365px) {

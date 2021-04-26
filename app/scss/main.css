@@ -6111,7 +6111,7 @@ form.checkout-form label span::after {
     border-radius: 15px;
   }
   .modal-content__left .modal-content__field {
-    padding: 15px 5px;
+    padding: 10px 5px 15px;
   }
   .modal-content__left:first-child {
     width: 100%;
@@ -6733,6 +6733,16 @@ form.checkout-form label span::after {
 
   .product-card__btn .add-cart svg {
     width: 12px;
+  }
+
+  .work-dates ul li span {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .work-dates ul li p {
+    font-size: 8px;
+    line-height: 12px;
   }
 }
 @media screen and (max-width: 365px) {

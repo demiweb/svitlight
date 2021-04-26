@@ -4887,11 +4887,13 @@ form.checkout-form label span::after {
   }
 
   .slider-product-for .slick-slider-arrow.slick-next::after {
-    transform: translate(-3px, 0) rotate(135deg);
+    transform: translate(-2px, 0) rotate(135deg);
+    -webkit-transform: translate(-4px, 0) rotate(135deg);
   }
 
   .slider-product-for .slick-slider-arrow.slick-prev::after {
-    transform: translate(-2px, 0) rotate(-45deg);
+    transform: translate(0, 0) rotate(-45deg);
+    -webkit-transform: translate(-3px, 0) rotate(-45deg);
   }
 
   .prod-category__card {

@@ -1765,7 +1765,7 @@ footer {
   top: 50%;
   left: 50%;
   margin-left: 7px;
-  transform: translate(-50%, 0) rotate(-135deg);
+  transform: translate(-50%, -2px) rotate(-135deg);
 }
 .slider-product-nav .slick-slider-arrow.slick-prev {
   top: 0;
@@ -4887,7 +4887,11 @@ form.checkout-form label span::after {
   }
 
   .slider-product-for .slick-slider-arrow.slick-next::after {
-    transform: translate(-2px, 0) rotate(135deg);
+    transform: translate(-4px, 0) rotate(135deg);
+  }
+
+  .slider-product-for .slick-slider-arrow.slick-prev::after {
+    transform: translate(4px, 0) rotate(-45deg);
   }
 
   .prod-category__card {

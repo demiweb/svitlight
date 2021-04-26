@@ -673,6 +673,7 @@ header {
         &:hover {
           p {
             color: #767676;
+            font-weight: 500;
             transition: color 0.3s ease;
           }
         }
@@ -1263,12 +1264,12 @@ footer {
   font-family: $main-font;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.71rem;
+  font-size: 10px;
   line-height: 12px;
   color: $white;
 
   &:nth-child(2) {
-    margin-left: 8px;
+    margin-left: 5px;
   }
 
   &--green {
@@ -1277,6 +1278,7 @@ footer {
 
   &--orange {
     background: #EA9C7D;
+    padding: 6px 8px;
   }
 
   &--red {
@@ -1868,6 +1870,10 @@ footer {
       text-transform: lowercase;
 
       color: #84B286;
+      &:hover {
+        font-weight: 400;
+        text-decoration: underline;
+      }
 
     }
   }
@@ -1933,8 +1939,10 @@ footer {
       right: 0;
 
       &::after {
-
-        transform: translate(0, 0) rotate(-135deg);
+        top: 50%;
+        left: 50%;
+        margin-left: 7px;
+        transform: translate(-50%, 0) rotate(-135deg);
       }
     }
 
@@ -1944,8 +1952,12 @@ footer {
       left: 0;
       right: 0;
 
+
       &::after {
-        transform: translate(0, 3px) rotate(45deg);
+        top: 50%;
+        left: 50%;
+        margin-left: 7px;
+        transform: translate(-50%, 3px) rotate(45deg);
       }
     }
   }
@@ -1977,7 +1989,7 @@ footer {
 
       &::after {
 
-        transform: translate(-2px, 0) rotate(135deg);
+        transform: translate(-4px, 0) rotate(135deg);
       }
     }
 
@@ -2266,6 +2278,13 @@ footer {
     position: sticky;
     top: 100px;
     z-index: 9;
+     .btn, .favorite {
+       border-color: rgba(255, 255, 255, 0);
+     }
+    .favorite {
+      background: #fafafa;
+      width: 40px;
+    }
   }
 }
 
@@ -2653,8 +2672,12 @@ footer {
     margin: 0;
     margin-left: 6px;
     list-style: none;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling-x: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling-x: touch;
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
 
     li {
       flex-shrink: 0;
@@ -4896,7 +4919,7 @@ form.checkout-form {
     border-radius: 2.5px;
     border: 1px solid rgba(255, 255, 255, 0);
     height: 35px;
-    width: calc(100% - 60px);
+    width: calc(100% - 49px);
     font-style: normal;
     font-weight: 500;
     font-size: 1em;

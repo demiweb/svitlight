@@ -1746,7 +1746,7 @@ footer {
   border: 1px solid #767676;
 }
 .slider-product-nav .slick-list {
-  padding: 35px 0 !important;
+  padding: 32px 0 !important;
 }
 .slider-product-nav .slick-slider-arrow {
   width: 100%;
@@ -4886,6 +4886,16 @@ form.checkout-form label span::after {
     transform: translate(-50%, -2px) rotate(-135deg);
   }
 
+  .slider-product-for .slick-slider-arrow.slick-next::after {
+    transform: translate(-2px, 0) rotate(135deg);
+    -webkit-transform: translate(-2px, 0) rotate(135deg);
+  }
+
+  .slider-product-for .slick-slider-arrow.slick-prev::after {
+    transform: translate(0, 0) rotate(-45deg);
+    -webkit-transform: translate(-2px, 0) rotate(-45deg);
+  }
+
   @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
       .slider-product-for .slick-slider-arrow.slick-prev::after {
@@ -5671,8 +5681,22 @@ form.checkout-form label span::after {
     font-size: 10px;
     line-height: 12px;
   }
+
+  .product-card__price p:nth-child(2) {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .product-card__price p:nth-child(2) strong {
+    font-size: 8px;
+    line-height: 12px;
+  }
 }
 @media screen and (max-width: 640px) {
+  .product-card__bottom > span {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   .modal-cart__line .modal-cart__name p {
     font-weight: normal;
   }
@@ -6678,6 +6702,37 @@ form.checkout-form label span::after {
 
   header.scroll-down .header__bottom-line {
     transform: translate(0, 0);
+  }
+
+  .product-card__price p:nth-child(2) {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .product-card__price p:nth-child(2) strong {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .product-card {
+    padding: 5px;
+  }
+
+  .product-card__btn .btn {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .product-tag {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .product-card .favorite svg {
+    width: 11px;
+  }
+
+  .product-card__btn .add-cart svg {
+    width: 12px;
   }
 }
 @media screen and (max-width: 365px) {

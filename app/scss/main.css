@@ -1183,8 +1183,14 @@ footer {
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
+  width: 35px;
+  height: 25px;
   line-height: 12px;
+  box-sizing: border-box;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-tag:nth-child(2) {
   margin-left: 5px;
@@ -3924,10 +3930,12 @@ form.form-inputs label span::after {
 .checkout__right .modal-cart__tab--content {
   max-height: none;
   overflow-y: visible;
+  margin-top: 0;
 }
 .checkout__right .modal-cart__line {
   background: #ffffff;
   margin-bottom: 10px;
+  padding: 10px;
 }
 .checkout__right .modal-cart__line:last-child {
   margin-bottom: 0;
@@ -4007,7 +4015,7 @@ form.form-inputs label span::after {
 
 .checkout__content {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
   background: #ffffff;
   border-radius: 10px;
   padding: 14px 10px;
@@ -4862,6 +4870,11 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 992px) {
+  .breadcrumb li a, .breadcrumb li span {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
   .select-type > span {
     width: calc(100% - 24px);
     height: 30px;
@@ -5146,8 +5159,8 @@ form.checkout-form label span::after {
   }
 
   .blog-article__right {
-    width: 180px;
-    padding-left: 40px;
+    width: 220px;
+    padding-left: 60px;
     position: static;
     top: auto;
   }
@@ -5266,6 +5279,8 @@ form.checkout-form label span::after {
 
   .product-tag {
     padding: 4px;
+    width: 25px;
+    height: 18px;
     font-size: 8px;
     line-height: 10px;
   }
@@ -5683,6 +5698,14 @@ form.checkout-form label span::after {
     font-size: 8px;
     line-height: 12px;
   }
+
+  .checkout__right .modal-cart__line {
+    padding: 5px 10px;
+  }
+
+  checkout__content {
+    margin-top: 22px;
+  }
 }
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
@@ -5702,6 +5725,10 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .item-page__breadcrumbs {
+    display: none;
+  }
+
   .product-head > span {
     font-size: 10px;
   }
@@ -6463,7 +6490,7 @@ form.checkout-form label span::after {
 
   .product-tag {
     width: 33px;
-    height: 24px;
+    height: 23px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;

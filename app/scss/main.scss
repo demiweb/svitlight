@@ -1265,8 +1265,14 @@ footer {
   font-style: normal;
   font-weight: bold;
   font-size: 10px;
+  width: 35px;
+  height: 25px;
   line-height: 12px;
+  box-sizing: border-box;
   color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:nth-child(2) {
     margin-left: 5px;
@@ -4452,11 +4458,13 @@ form.form-inputs {
   .modal-cart__tab--content {
     max-height: none;
     overflow-y: visible;
+    margin-top: 0;
   }
 
   .modal-cart__line {
     background: $white;
     margin-bottom: 10px;
+    padding: 10px;
 
     &:last-child {
       margin-bottom: 0;
@@ -4545,7 +4553,7 @@ form.form-inputs {
 
 .checkout__content {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
   background: $white;
   border-radius: 10px;
   padding: 14px 10px;

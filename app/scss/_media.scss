@@ -1673,14 +1673,28 @@
     height: 30px;
   }
   .final-order__right .img {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
 
     img {
-      width: 55px;
-      height: 55px;
+      width: 75px;
+      height: 75px;
     }
 
+  }
+  .final-order__right .footer__socials .btn.btn-social {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer__socials .btn:last-child {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .final-order {
+    overflow-y: auto;
+  }
+  .final-order-container {
+    overflow-y: auto;
   }
   .back-buy {
     padding-top: 10px;

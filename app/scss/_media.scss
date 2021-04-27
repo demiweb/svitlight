@@ -349,6 +349,10 @@
       }
     }
   }
+  .modal-cart__tab-head .modal-cart__name, .modal-cart__tab-head .modal-cart__part {
+    font-size: 10px;
+    line-height: 12px;
+  }
   .blog-article {
     flex-direction: row;
   }
@@ -921,6 +925,12 @@
 }}
 
 @media screen and (max-width: 640px) {
+  .blog-main {
+    margin-top: 20px;
+  }
+  .prod-category__list {
+    display: none;
+  }
   .item-page__breadcrumbs {
     display: none;
   }

@@ -3426,7 +3426,7 @@ footer {
   justify-content: flex-start;
   margin-top: 10px;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .modal-cart__tab--content::-webkit-scrollbar-track {
@@ -3472,7 +3472,7 @@ input[type=number] {
 .modal-cart__line .modal-cart__name p {
   font-style: normal;
   font-weight: 500;
-  font-size: 0.6em;
+  font-size: 12px;
   line-height: 125%;
   color: #000000;
   margin-left: 14px;
@@ -5154,6 +5154,11 @@ form.checkout-form label span::after {
     height: 15px;
   }
 
+  .modal-cart__tab-head .modal-cart__name, .modal-cart__tab-head .modal-cart__part {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   .blog-article {
     flex-direction: row;
   }
@@ -5725,6 +5730,14 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .blog-main {
+    margin-top: 20px;
+  }
+
+  .prod-category__list {
+    display: none;
+  }
+
   .item-page__breadcrumbs {
     display: none;
   }

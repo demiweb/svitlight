@@ -3861,7 +3861,7 @@ footer {
   justify-content: flex-start;
   margin-top: 10px;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar-track {
@@ -3910,7 +3910,7 @@ input[type=number] {
     p {
       font-style: normal;
       font-weight: 500;
-      font-size: 0.6em;
+      font-size: 12px;
       line-height: 125%;
       color: #000000;
       margin-left: 14px;

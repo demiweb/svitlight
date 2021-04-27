@@ -909,6 +909,41 @@
 }}
 
 @media screen and (max-width: 640px) {
+  .product-head>span {
+    font-size: 10px;
+  }
+  .product-content {
+    margin-top: 0;
+  }
+  .product-feature span {
+    font-size: 10px;
+  }
+  .product-feature p {
+    font-size: 8px;
+    strong {
+      font-size: 10px;
+    }
+  }
+  .product-text div p {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+  .product-text div span {
+    font-size: 10px;
+    margin-bottom: 8px;
+
+  }
+  .product-head {
+    h1 {
+      font-size: 16px;
+    }
+  }
+  .product-head__btns .btn {
+    font-size: 12px;
+  }
+  .product-head__det  {
+    display: none;
+  }
   .product-card__bottom > span {
     font-size: 10px;
     line-height: 12px;

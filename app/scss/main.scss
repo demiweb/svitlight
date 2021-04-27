@@ -13,7 +13,9 @@ body, html {
   min-width: 320px;
 
 }
-
+* {
+  letter-spacing: 0;
+}
 
 ::-webkit-scrollbar {
   width: 4px;

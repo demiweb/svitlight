@@ -130,6 +130,10 @@ body, html {
   min-width: 320px;
 }
 
+* {
+  letter-spacing: 0;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -5733,21 +5737,27 @@ form.checkout-form label span::after {
     line-height: 12px;
   }
 
+  .checkout__right .products__name span, .checkout__right h1 {
+    font-size: 14px;
+  }
+  .checkout__right .products__name span strong {
+    font-size: 10px;
+    line-height: 12px;
+  }
   .checkout__right .modal-cart__tab-head .modal-cart__name, .checkout__right .modal-cart__tab-head .modal-cart__part {
     font-size: 8px;
     line-height: 10px;
+  }
+  .checkout__right .modal-cart__tab-head {
+    padding-right: 0;
   }
 
   .checkout__right .modal-cart__line {
     padding: 5px 0 5px 10px;
   }
 
-  .modal-cart__tab-head {
-    padding-right: 0;
-  }
-
-  checkout__content {
-    margin-top: 22px;
+  .checkout-content__stage {
+    font-size: 10px;
   }
 }
 @media not all and (min-resolution: 0.001dpcm) {
@@ -5768,6 +5778,10 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .header__menu > ul > li > a p {
+    font-weight: 400;
+  }
+
   .blog-main {
     margin-top: 20px;
   }

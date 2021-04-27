@@ -4887,26 +4887,19 @@ form.checkout-form label span::after {
   }
 
   .slider-product-for .slick-slider-arrow.slick-next::after {
+    width: 6px;
+    height: 6px;
     transform: translate(-2px, 0) rotate(135deg);
     -webkit-transform: translate(-2px, 0) rotate(135deg);
   }
 
   .slider-product-for .slick-slider-arrow.slick-prev::after {
+    width: 6px;
+    height: 6px;
     transform: translate(0, 0) rotate(-45deg);
-    -webkit-transform: translate(-2px, 0) rotate(-45deg);
+    -webkit-transform: translate(0px, 0) rotate(-45deg);
   }
 
-  @media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) {
-      .slider-product-for .slick-slider-arrow.slick-prev::after {
-        -webkit-transform: translate(-3px, 0) rotate(-45deg);
-      }
-
-      .slider-product-for .slick-slider-arrow.slick-next::after {
-        -webkit-transform: translate(-4px, 0) rotate(135deg);
-      }
-    }
-  }
   .prod-category__card {
     width: calc((100% / 5) - (56px / 5));
     margin-right: 14px;
@@ -5691,6 +5684,23 @@ form.checkout-form label span::after {
     line-height: 12px;
   }
 }
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    @media screen and (max-width: 992px) {
+      .slider-product-for .slick-slider-arrow.slick-prev::after {
+        width: 7px;
+        height: 7px;
+        -webkit-transform: translate(-3px, 0) rotate(-45deg);
+      }
+
+      .slider-product-for .slick-slider-arrow.slick-next::after {
+        width: 7px;
+        height: 7px;
+        -webkit-transform: translate(-4px, 0) rotate(135deg);
+      }
+    }
+  }
+}
 @media screen and (max-width: 640px) {
   .product-card__bottom > span {
     font-size: 10px;
@@ -6120,6 +6130,11 @@ form.checkout-form label span::after {
   }
   .modal-content__left:first-child .modal-content__field {
     padding: 15px 20px;
+  }
+
+  .final-order__left > span {
+    text-align: center;
+    max-width: 247px;
   }
 
   .work-dates ul li {
@@ -6698,6 +6713,9 @@ form.checkout-form label span::after {
     margin-right: 0;
     max-height: none;
     overflow: visible;
+    height: auto;
+    touch-action: auto;
+    -ms-touch-action: auto;
   }
 
   header.scroll-down .header__bottom-line {

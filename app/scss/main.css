@@ -4641,7 +4641,7 @@ form.checkout-form label span::after {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   padding: 15px;
@@ -4656,7 +4656,7 @@ form.checkout-form label span::after {
   box-sizing: border-box;
   height: auto;
   margin: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: row;
@@ -6056,7 +6056,7 @@ form.checkout-form label span::after {
 
   .final-order-container {
     flex-direction: column;
-    padding: 15px 10px;
+    padding: 25px 15px;
   }
 
   .final-order__right .footer__socials {
@@ -6534,6 +6534,7 @@ form.checkout-form label span::after {
   .final-order__right .footer__socials .btn.btn-social {
     font-size: 12px;
     line-height: 14px;
+    margin-right: 0;
   }
 
   .footer__socials .btn:last-child {

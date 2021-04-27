@@ -1221,7 +1221,7 @@
   }
   .final-order-container {
     flex-direction: column;
-    padding: 15px 10px;
+    padding: 25px 15px;
 
   }
   .final-order__right .footer__socials {
@@ -1685,6 +1685,7 @@
   .final-order__right .footer__socials .btn.btn-social {
     font-size: 12px;
     line-height: 14px;
+    margin-right: 0;
   }
   .footer__socials .btn:last-child {
     font-size: 10px;

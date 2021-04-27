@@ -5271,7 +5271,7 @@ form.checkout-form {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   padding: 15px;
@@ -5289,7 +5289,7 @@ form.checkout-form {
 
   height: auto;
   margin: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: row;

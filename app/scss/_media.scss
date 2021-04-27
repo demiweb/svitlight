@@ -52,6 +52,10 @@
 }
 
 @media screen and (max-width: 992px) {
+  .offer-table__line span, .offer-table__line p {
+    font-size: 12px;
+    line-height: 14px;
+  }
   .checkout__content {
     margin-top: 22px;
   }

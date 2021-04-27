@@ -4848,6 +4848,11 @@ form.checkout-form label span::after {
     max-width: 1010px;
   }
 
+  .header__socials .btn-social {
+    width: 160px;
+    height: 25px;
+  }
+
   .final-order__right .footer__socials {
     margin-bottom: 12px;
   }
@@ -5778,6 +5783,25 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .checkout__right .modal-cart__total .btn {
+    margin-top: 0;
+  }
+
+  .checkout__total-left ul {
+    margin-top: 12px;
+  }
+
+  .checkout {
+    margin-top: 0;
+  }
+  .checkout .products__name span, .checkout h1 {
+    font-size: 14px;
+  }
+
+  .checkout__grey > span {
+    font-size: 10px;
+  }
+
   .header__menu > ul > li > a p {
     font-weight: 400;
   }

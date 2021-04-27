@@ -5783,6 +5783,14 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .modal-cart__tab-head .modal-cart__name {
+    font-size: 10px;
+  }
+
+  .modal-cart__tab-head {
+    padding-right: 5px;
+  }
+
   .checkout__right .modal-cart__total .btn {
     margin-top: 0;
   }
@@ -6170,11 +6178,15 @@ form.checkout-form label span::after {
   }
 
   .modal-cart__name {
-    width: 34%;
+    width: 40%;
+  }
+
+  .modal-cart__line:nth-child(even) {
+    background: #ffffff;
   }
 
   .modal-cart__part {
-    width: calc((100% - 34%) / 3);
+    width: calc((100% - 40%) / 3);
   }
 
   .modal-cart__line {

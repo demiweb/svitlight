@@ -49,6 +49,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .checkout__content {
+    margin-top: 22px;
+  }
   .breadcrumb li a, .breadcrumb li span {
     font-size: 8px;
     line-height: 10px;
@@ -180,14 +183,25 @@
     margin-top: 6px;
 
     a {
-      font-size: 10px;
+      font-size: 8px;
     }
   }
   .checkout-pay label {
     margin-bottom: 6px;
   }
+  .checkout-no-border {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  .checkout-content__head {
+    margin-bottom: 7px;
+  }
+  .checkout-border {
+    margin-bottom: 15px;
+  }
   form.checkout-form small {
     margin-bottom: 7px;
+    font-size: 10px;
   }
   form.checkout-form label input {
     height: 26px;
@@ -293,6 +307,7 @@
     ul {
       li {
         height: 18px;
+        margin-bottom: 0;
 
         span, p {
           font-size: 0.833em;
@@ -352,6 +367,10 @@
   .modal-cart__tab-head .modal-cart__name, .modal-cart__tab-head .modal-cart__part {
     font-size: 10px;
     line-height: 12px;
+  }
+  .modal-cart__tab-head .modal-cart__name {
+    font-size: 12px;
+    line-height: 14px;
   }
   .blog-article {
     flex-direction: row;
@@ -884,8 +903,18 @@
       line-height: 12px;
     }
   }
+  .checkout__right {
+    .modal-cart__tab-head .modal-cart__name, .modal-cart__tab-head .modal-cart__part {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+
   .checkout__right .modal-cart__line {
-    padding: 5px 10px;
+    padding: 5px 0 5px 10px;
+  }
+  .modal-cart__tab-head {
+    padding-right: 0;
   }
   checkout__content {
     margin-top: 22px;

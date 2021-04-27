@@ -1488,7 +1488,7 @@ footer {
 .blog-card__info span {
   font-style: normal;
   font-weight: normal;
-  font-size: 0.71rem;
+  font-size: 10px;
   line-height: 12px;
   color: #959595;
 }
@@ -1747,9 +1747,10 @@ footer {
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 10px;
+  outline: none;
 }
 .slider-product-nav .slider-product-item.slick-current {
-  border: 1px solid #767676;
+  border: 1px solid #767676 !important;
 }
 .slider-product-nav .slick-list {
   padding: 32px 0 !important;
@@ -3081,7 +3082,7 @@ footer {
 .modal-cart__tab-head .modal-cart__name, .modal-cart__tab-head .modal-cart__part {
   font-style: normal;
   font-weight: normal;
-  font-size: 0.857em;
+  font-size: 12px;
   line-height: 125%;
   height: 100%;
   color: #959595;
@@ -3091,7 +3092,7 @@ footer {
 .modal-cart__tab-head .modal-cart__part {
   text-align: center;
   justify-content: center;
-  font-size: 0.71em;
+  font-size: 12px;
 }
 
 .modal-cart__name {
@@ -3119,6 +3120,9 @@ footer {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.modal-cart__part .add-cart--cart svg {
+  width: 13px;
 }
 .modal-cart__part .add-cart--cart svg path {
   fill: #767676;
@@ -3936,6 +3940,7 @@ form.form-inputs label span::after {
   background: #ffffff;
   margin-bottom: 10px;
   padding: 10px;
+  border-radius: 10px;
 }
 .checkout__right .modal-cart__line:last-child {
   margin-bottom: 0;
@@ -4182,7 +4187,7 @@ form.checkout-form label span::after {
 .checkout-no-border > span {
   font-style: normal;
   font-weight: normal;
-  font-size: 0.875em;
+  font-size: 10px;
   line-height: 125%;
   color: #959595;
   display: inline-block;
@@ -4192,7 +4197,7 @@ form.checkout-form label span::after {
   margin-top: 10px;
 }
 .checkout-no-border > span a {
-  font-size: 1.2em;
+  font-size: 12px;
   line-height: 125%;
   color: #508ECB;
   text-decoration: none;
@@ -4870,6 +4875,10 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 992px) {
+  .checkout__content {
+    margin-top: 22px;
+  }
+
   .breadcrumb li a, .breadcrumb li span {
     font-size: 8px;
     line-height: 10px;
@@ -4993,15 +5002,29 @@ form.checkout-form label span::after {
     margin-top: 6px;
   }
   .checkout-no-border > span a {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .checkout-pay label {
     margin-bottom: 6px;
   }
 
+  .checkout-no-border {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .checkout-content__head {
+    margin-bottom: 7px;
+  }
+
+  .checkout-border {
+    margin-bottom: 15px;
+  }
+
   form.checkout-form small {
     margin-bottom: 7px;
+    font-size: 10px;
   }
 
   form.checkout-form label input {
@@ -5114,6 +5137,7 @@ form.checkout-form label span::after {
   }
   .work-dates ul li {
     height: 18px;
+    margin-bottom: 0;
   }
   .work-dates ul li span, .work-dates ul li p {
     font-size: 0.833em;
@@ -5157,6 +5181,11 @@ form.checkout-form label span::after {
   .modal-cart__tab-head .modal-cart__name, .modal-cart__tab-head .modal-cart__part {
     font-size: 10px;
     line-height: 12px;
+  }
+
+  .modal-cart__tab-head .modal-cart__name {
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .blog-article {
@@ -5704,8 +5733,17 @@ form.checkout-form label span::after {
     line-height: 12px;
   }
 
+  .checkout__right .modal-cart__tab-head .modal-cart__name, .checkout__right .modal-cart__tab-head .modal-cart__part {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
   .checkout__right .modal-cart__line {
-    padding: 5px 10px;
+    padding: 5px 0 5px 10px;
+  }
+
+  .modal-cart__tab-head {
+    padding-right: 0;
   }
 
   checkout__content {

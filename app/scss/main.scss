@@ -1627,7 +1627,7 @@ footer {
   span {
     font-style: normal;
     font-weight: normal;
-    font-size: 0.71rem;
+    font-size: 10px;
     line-height: 12px;
     color: #959595;
   }
@@ -1921,9 +1921,10 @@ footer {
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
+    outline: none;
 
     &.slick-current {
-      border: 1px solid #767676;
+      border: 1px solid #767676 !important;
     }
   }
 
@@ -3452,7 +3453,7 @@ footer {
   .modal-cart__name, .modal-cart__part {
     font-style: normal;
     font-weight: normal;
-    font-size: 0.857em;
+    font-size: 12px;
     line-height: 125%;
     height: 100%;
     color: #959595;
@@ -3463,7 +3464,7 @@ footer {
   .modal-cart__part {
     text-align: center;
     justify-content: center;
-    font-size: 0.71em;
+    font-size: 12px;
   }
 }
 
@@ -3495,6 +3496,7 @@ footer {
     cursor: pointer;
 
     svg {
+      width: 13px;
       path {
         fill: #767676;
         transition: fill 0.3s ease;
@@ -4465,6 +4467,7 @@ form.form-inputs {
     background: $white;
     margin-bottom: 10px;
     padding: 10px;
+    border-radius: 10px;
 
     &:last-child {
       margin-bottom: 0;
@@ -4745,7 +4748,7 @@ form.checkout-form {
   > span {
     font-style: normal;
     font-weight: normal;
-    font-size: 0.875em;
+    font-size: 10px;
     line-height: 125%;
 
     color: #959595;
@@ -4756,7 +4759,7 @@ form.checkout-form {
     margin-top: 10px;
 
     a {
-      font-size: 1.2em;
+      font-size: 12px;
       line-height: 125%;
       color: #508ECB;
       text-decoration: none;

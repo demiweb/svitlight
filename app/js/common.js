@@ -307,6 +307,8 @@ workDatesHave();
 //filter checkbox
 
 let openModalBtns = [...document.querySelectorAll('.open-modal')];
+let modalsWindows = [...document.querySelectorAll('.modal-window')];
+
 
 function ifHaveModals() {
     if (!openModalBtns.length) {
@@ -354,6 +356,17 @@ function ifHaveModals() {
                 }
             })
         })
+        modalsWindows.forEach((wn) => {
+            wn.addEventListener('click', () => {
+                wn.classList.remove('open')
+                document.body.classList.remove('no-scroll');
+                document.querySelector('.open-modal.active').classList.remove('active');
+            })
+            wn.querySelector('.modal-content').addEventListener('click', (e) => {
+                e.stopPropagation();
+            })
+        })
+
     }
 }
 

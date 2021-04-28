@@ -1221,6 +1221,10 @@ footer {
     transition: box-shadow 0.3s ease;
 
     box-shadow: 0 5px 12.5px 3px rgba(0, 0, 0, 0.05);
+    .btn {
+      background: #84b286;
+      color: $white;
+    }
   }
 }
 
@@ -3900,10 +3904,12 @@ input[type=number] {
   padding: 4px 10px;
   box-sizing: border-box;
   border-radius: 5px;
-
-  &:nth-child(even) {
+  transition: background-color 0.3s ease;
+  &:hover {
     background: #FAFAFA;
+    transition: background-color 0.3s ease;
   }
+
 
   .modal-cart__name {
     display: flex;

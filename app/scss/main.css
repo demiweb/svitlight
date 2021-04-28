@@ -1145,6 +1145,10 @@ footer {
   transition: box-shadow 0.3s ease;
   box-shadow: 0 5px 12.5px 3px rgba(0, 0, 0, 0.05);
 }
+.product-card:hover .btn {
+  background: #84b286;
+  color: #ffffff;
+}
 
 .product-card__top {
   width: 100%;
@@ -3467,9 +3471,11 @@ input[type=number] {
   padding: 4px 10px;
   box-sizing: border-box;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
-.modal-cart__line:nth-child(even) {
+.modal-cart__line:hover {
   background: #FAFAFA;
+  transition: background-color 0.3s ease;
 }
 .modal-cart__line .modal-cart__name {
   display: flex;

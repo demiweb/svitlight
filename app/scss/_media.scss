@@ -2083,6 +2083,8 @@
     height: auto;
     touch-action: auto;
     -ms-touch-action: auto;
+    flex-shrink: 0;
+    flex-grow: 1;
   }
   header {
     &.scroll-down {

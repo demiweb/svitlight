@@ -2291,6 +2291,10 @@ footer {
     position: sticky;
     top: 100px;
     z-index: 9;
+    display: none;
+    &.visible {
+      display: flex;
+    }
      .btn, .favorite {
        border-color: rgba(255, 255, 255, 0);
      }

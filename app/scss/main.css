@@ -2074,6 +2074,10 @@ footer {
   position: sticky;
   top: 100px;
   z-index: 9;
+  display: none;
+}
+.product-page__info .product-info__head.visible {
+  display: flex;
 }
 .product-page__info .product-info__head .btn, .product-page__info .product-info__head .favorite {
   border-color: rgba(255, 255, 255, 0);
@@ -5795,6 +5799,15 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 640px) {
+  .all-products__head h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filter-checked::after {
+    content: none;
+  }
+
   .modal-cart__tab-head .modal-cart__name {
     font-size: 10px;
   }
@@ -6507,6 +6520,14 @@ form.checkout-form label span::after {
   }
 }
 @media screen and (max-width: 600px) {
+  header {
+    position: fixed;
+  }
+
+  main {
+    margin-top: 71px;
+  }
+
   .footer .footer__socials {
     align-self: center;
   }

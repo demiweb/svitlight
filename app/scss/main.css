@@ -6929,6 +6929,8 @@ form.checkout-form label span::after {
     overflow-y: auto;
     flex-wrap: nowrap;
     position: relative;
+    align-items: flex-start;
+    justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -6938,8 +6940,8 @@ form.checkout-form label span::after {
     max-height: none;
     overflow: visible;
     height: auto;
-    touch-action: none;
-    -ms-touch-action: none;
+    touch-action: auto;
+    -ms-touch-action: auto;
   }
 
   header.scroll-down .header__bottom-line {

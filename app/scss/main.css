@@ -6040,6 +6040,9 @@ form.checkout-form label span::after {
   }
 
   .product-info__head {
+    display: none !important;
+  }
+  .product-info__head.visible {
     display: none;
   }
 
@@ -6923,7 +6926,7 @@ form.checkout-form label span::after {
   .seo-block__content {
     flex-direction: column;
     max-height: 505px;
-    overflow-y: scroll;
+    overflow-y: auto;
     flex-wrap: nowrap;
     position: relative;
     -webkit-overflow-scrolling: touch;
@@ -6935,8 +6938,8 @@ form.checkout-form label span::after {
     max-height: none;
     overflow: visible;
     height: auto;
-    touch-action: auto;
-    -ms-touch-action: auto;
+    touch-action: none;
+    -ms-touch-action: none;
   }
 
   header.scroll-down .header__bottom-line {

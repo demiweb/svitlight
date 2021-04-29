@@ -1199,7 +1199,10 @@
     width: 80px;
   }
   .product-info__head {
-    display: none;
+    display: none !important;
+    &.visible {
+      display: none;
+    }
   }
   .product-head__btns .btn {
     width: calc(100% - 90px);
@@ -2064,7 +2067,7 @@
   .seo-block__content {
     flex-direction: column;
     max-height: 505px;
-    overflow-y: scroll;
+    overflow-y: auto;
     flex-wrap: nowrap;
     position: relative;
 
@@ -2076,8 +2079,8 @@
     max-height: none;
     overflow: visible;
     height: auto;
-    touch-action: auto;
-    -ms-touch-action: auto;
+    touch-action: none;
+    -ms-touch-action: none;
   }
   header {
     &.scroll-down {

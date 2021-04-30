@@ -52,6 +52,12 @@
 }
 
 @media screen and (max-width: 992px) {
+  .favorite {
+    padding: 0;
+  }
+  .add-cart {
+    padding: 0;
+  }
   .offer-table__line span, .offer-table__line p {
     font-size: 12px;
     line-height: 14px;
@@ -299,6 +305,9 @@
   }
   .modal-content__right {
     padding: 12px 36px 12px 10px;
+  }
+  .btn {
+    padding: 2px;
   }
   .modal-socials {
     margin-top: 14px;
@@ -955,7 +964,19 @@
 
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {
-  @media screen and (max-width: 992px) {
+    @media screen and (max-width: 992px) {
+      .slider-product-for .slick-slider-arrow.slick-prev::after {
+        width: 7px;
+        height: 7px;
+        -webkit-transform: translate(-1px, 0) rotate(-45deg);
+      }
+      .slider-product-for .slick-slider-arrow.slick-next::after {
+        width: 7px;
+        height: 7px;
+        -webkit-transform: translate(-3px, 0) rotate(135deg);
+      }
+    }
+  @media screen and (max-width: 640px) {
     .slider-product-for .slick-slider-arrow.slick-prev::after {
       width: 7px;
       height: 7px;

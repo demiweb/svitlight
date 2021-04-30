@@ -1090,6 +1090,7 @@ footer {
     border-bottom: none;
     margin-left: 3px;
     content: '';
+    flex-shrink: 0;
     display: inline-block;
     transform: rotate(-45deg);
     transition: border-top-color 0.3s ease, border-left-color 0.3s ease;
@@ -2206,6 +2207,7 @@ footer {
   .btn {
     height: 30px;
     flex-grow: 1;
+    padding: 2px;
     width: calc((100% - 120px) / 2);
   }
 }

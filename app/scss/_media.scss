@@ -976,6 +976,10 @@
 
         -webkit-transform: translate(-3px, 0) rotate(135deg);
       }
+      .slider-product-nav .slick-slider-arrow.slick-prev::after {
+        transform: translate(-50%,0px) rotate(45deg);
+
+      }
     }
   @media screen and (max-width: 640px) {
     .slider-product-for .slick-slider-arrow.slick-prev::after {

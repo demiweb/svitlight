@@ -4847,6 +4847,63 @@ form.checkout-form label span::after {
   color: #959595;
 }
 
+.modal-windows {
+  position: fixed;
+  top: 81px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fafafada;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  z-index: 10;
+  opacity: 0;
+  transform: translate(0, -100%);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.modal-windows .modal-content {
+  width: 300px;
+  margin: 20px auto;
+}
+.modal-windows.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.fast-buy-block {
+  padding: 20px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fast-buy-block > span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.28em;
+  line-height: 125%;
+  color: #1a1a1a;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto 6px;
+}
+.fast-buy-block form.form-inputs label {
+  justify-content: flex-start;
+}
+.fast-buy-block form.form-inputs {
+  margin-bottom: 0;
+}
+.fast-buy-block form.form-inputs .btn {
+  margin: 22px 0 0;
+  width: 204px;
+}
+
 @media screen and (max-width: 1440px) {
   body, html {
     font-size: 14px;
@@ -5146,8 +5203,15 @@ form.checkout-form label span::after {
     height: 18px;
   }
 
-  .modal-window {
+  .modal-window, .modal-windows {
     top: 71px;
+  }
+
+  .fast-buy-block {
+    padding: 0;
+  }
+  .fast-buy-block > span {
+    font-size: 1.16em;
   }
 
   .modal-content__left {
@@ -6288,7 +6352,7 @@ form.checkout-form label span::after {
     margin: 14px 0;
   }
 
-  .modal-window {
+  .modal-window, .modal-windows {
     overflow-y: scroll;
     align-items: flex-start;
     background: #fafafa;

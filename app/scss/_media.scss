@@ -296,8 +296,14 @@
     height: 18px;
   }
 
-  .modal-window {
+  .modal-window, .modal-windows {
     top: 71px;
+  }
+  .fast-buy-block {
+    padding: 0;
+    > span {
+      font-size: 1.16em;
+    }
   }
   .modal-content__left {
     padding: 12px 25px;
@@ -1419,7 +1425,7 @@
   .modal-cart__total {
     margin: 14px 0;
   }
-  .modal-window {
+  .modal-window, .modal-windows {
     overflow-y: scroll;
     align-items: flex-start;
     background: #fafafa;

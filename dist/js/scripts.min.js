@@ -102,11 +102,16 @@ function burgerMenuOpen() {
                 let activeModal = document.querySelector('.open-modal.active');
                 document.body.classList.toggle('no-scroll');
                 if(!activeModal) {
-
+                    if (document.querySelector('.modal-windows.open')) {
+                        document.querySelector('.modal-windows.open').classList.remove('open');
+                    }
                 } else {
                     activeModal.classList.remove('active');
                     document.querySelector('.modal-window.open').classList.remove('open');
                     document.body.classList.add('no-scroll');
+                    if (document.querySelector('.modal-windows.open')) {
+                        document.querySelector('.modal-windows.open').classList.remove('open');
+                    }
                 }
 
             })
@@ -321,14 +326,21 @@ function ifHaveModals() {
                 if (btn.classList.contains('open-modal--call')) {
                     if (!document.querySelector('.open-modal.active')) {
                         document.body.classList.add('no-scroll')
-
+                        if (document.querySelector('.modal-windows.open')) {
+                            document.querySelector('.modal-windows.open').classList.remove('open');
+                        }
                     } else {
                         if (!document.querySelector('.open-modal--call.active')) {
                             document.querySelector('.open-modal.active').classList.remove('active');
                             document.querySelector('.modal-window.open').classList.remove('open');
-
+                            if (document.querySelector('.modal-windows.open')) {
+                                document.querySelector('.modal-windows.open').classList.remove('open');
+                            }
                         } else {
-                            document.body.classList.remove('no-scroll')
+                            document.body.classList.remove('no-scroll');
+                            if (document.querySelector('.modal-windows.open')) {
+                                document.querySelector('.modal-windows.open').classList.remove('open');
+                            }
                         }
 
 
@@ -339,13 +351,21 @@ function ifHaveModals() {
                 if (btn.classList.contains('open-modal--cart')) {
                     if (!document.querySelector('.open-modal.active')) {
                         document.body.classList.add('no-scroll')
-
+                        if (document.querySelector('.modal-windows.open')) {
+                            document.querySelector('.modal-windows.open').classList.remove('open');
+                        }
                     } else {
                         if (!document.querySelector('.open-modal--cart.active')) {
                             document.querySelector('.open-modal.active').classList.remove('active');
                             document.querySelector('.modal-window.open').classList.remove('open');
+                            if (document.querySelector('.modal-windows.open')) {
+                                document.querySelector('.modal-windows.open').classList.remove('open');
+                            }
                         } else {
-                            document.body.classList.remove('no-scroll')
+                            document.body.classList.remove('no-scroll');
+                            if (document.querySelector('.modal-windows.open')) {
+                                document.querySelector('.modal-windows.open').classList.remove('open');
+                            }
 
                         }
 
@@ -883,3 +903,32 @@ window.addEventListener('scroll', function() {
 Visible2 (elementBtnsSlider);
 
 
+let fastBuy = [...document.querySelectorAll('.product-head__btns .btn.btn-white')];
+let fastBuyModal = document.querySelector('.modal-windows.modal-window--fast');
+
+function ifHaveFastBuy() {
+    if (!fastBuy.length) {
+
+    } else {
+        fastBuy.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                fastBuyModal.classList.add('open');
+                document.body.classList.add('no-scroll');
+                if (document.querySelector('.header__burger.open')) {
+                    document.querySelector('.header__burger.open').classList.remove('open');
+                    document.querySelector('.header__bottom-line').classList.remove('open');
+                    document.querySelector('.header__burger').closest('header').classList.remove('open');
+                }
+            });
+
+        })
+        fastBuyModal.addEventListener('click', () => {
+            fastBuyModal.classList.remove('open');
+            document.body.classList.remove('no-scroll')
+        })
+        fastBuyModal.querySelector('.modal-content').addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
+    }
+}
+ifHaveFastBuy();

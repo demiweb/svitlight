@@ -533,7 +533,7 @@ function ifHaveAmountChange() {
 ifHaveAmountChange();
 
 let tabsBtns = [...document.querySelectorAll('.tab-btn')];
-let tabsPanel = [...document.querySelectorAll('.modal-cart__tab')];
+let tabsPanel = [...document.querySelectorAll('.modal-tab')];
 
 function changeTabBtn() {
     if (!tabsBtns.length) {
@@ -541,21 +541,11 @@ function changeTabBtn() {
     } else {
         tabsBtns.forEach((tab, k) => {
             tab.addEventListener('click', () => {
-                document.querySelector('.modal-cart__tab.active').classList.remove('active')
+                document.querySelector('.modal-tab.active').classList.remove('active')
                 document.querySelector('.tab-btn.active').classList.remove('active')
                 tabsPanel[k].classList.add('active');
                 tab.classList.add('active');
 
-                if (tab.classList.contains('tab-btn--cart')) {
-                    document.querySelector('.modal-cart__total').classList.add('active');
-                    document.querySelector('.modal-cart__like-text').classList.remove('active');
-
-                } else {
-                    document.querySelector('.modal-cart__total').classList.remove('active');
-                    document.querySelector('.modal-cart__like-text').classList.add('active');
-
-
-                }
 
             })
         })

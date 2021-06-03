@@ -245,6 +245,16 @@
   .modal-cart__right {
     padding: 20px 15px;
   }
+  .modal-window--cart .modal-content {
+
+    .modal-cart__tab-control {
+      right: 15px;
+      width: calc(44% - 30px);
+    }
+    .modal-cart__right {
+
+    }
+  }
   .modal-cart__total .btn {
     width: 130px;
     height: 20px;
@@ -1399,7 +1409,7 @@
     order: 1;
     padding: 0;
   }
-  .modal-cart__like-text.active {
+  .modal-cart__like-text {
     display: none;
   }
   .modal-cart__left {
@@ -1436,6 +1446,21 @@
   .modal-content {
     padding: 15px;
     border-radius: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .modal-window--cart .modal-content {
+
+    .modal-cart__tab-control {
+      top: 15px;
+      right: 15px;
+      width: calc(100% - 30px);
+    }
+    .modal-cart__right {
+      padding-top: 34px;
+    }
+  }
+  .modal-tab {
     flex-direction: row;
     flex-wrap: wrap;
   }

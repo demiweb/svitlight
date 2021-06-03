@@ -3069,6 +3069,17 @@ footer {
   transform: translate(0, 0);
 }
 
+.modal-tab {
+  box-sizing: border-box;
+  width: 100%;
+  display: none;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.modal-tab.active {
+  display: flex;
+}
+
 .modal-cart__left {
   width: 56%;
   padding: 20px;
@@ -3317,15 +3328,12 @@ footer {
 }
 
 .modal-cart__like-text {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   margin: auto 0;
-}
-.modal-cart__like-text.active {
-  display: flex;
 }
 .modal-cart__like-text p {
   max-width: 200px;
@@ -3348,13 +3356,10 @@ footer {
   border-radius: 15px;
   padding: 25px;
   margin-top: auto;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-}
-.modal-cart__total.active {
-  display: flex;
 }
 .modal-cart__total span {
   font-style: normal;
@@ -3430,9 +3435,6 @@ footer {
 }
 
 .modal-cart__tab {
-  display: none;
-}
-.modal-cart__tab.active {
   display: flex;
 }
 
@@ -3515,6 +3517,19 @@ input[type=number] {
   box-shadow: 0 5px 12.5px 3px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
   background: #ffffff;
+}
+
+.modal-window--cart .modal-content {
+  position: relative;
+}
+.modal-window--cart .modal-content .modal-cart__tab-control {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: calc(44% - 60px);
+}
+.modal-window--cart .modal-content .modal-cart__right {
+  padding-top: 50px;
 }
 
 .modal-content__left {
@@ -5150,6 +5165,10 @@ form.checkout-form label span::after {
     padding: 20px 15px;
   }
 
+  .modal-window--cart .modal-content .modal-cart__tab-control {
+    right: 15px;
+    width: calc(44% - 30px);
+  }
   .modal-cart__total .btn {
     width: 130px;
     height: 20px;
@@ -6322,7 +6341,7 @@ form.checkout-form label span::after {
     padding: 0;
   }
 
-  .modal-cart__like-text.active {
+  .modal-cart__like-text {
     display: none;
   }
 
@@ -6365,6 +6384,20 @@ form.checkout-form label span::after {
   .modal-content {
     padding: 15px;
     border-radius: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .modal-window--cart .modal-content .modal-cart__tab-control {
+    top: 15px;
+    right: 15px;
+    width: calc(100% - 30px);
+  }
+  .modal-window--cart .modal-content .modal-cart__right {
+    padding-top: 34px;
+  }
+
+  .modal-tab {
     flex-direction: row;
     flex-wrap: wrap;
   }
